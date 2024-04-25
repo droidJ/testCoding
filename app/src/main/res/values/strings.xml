@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ebay_interview</string>
+    <string name="fetch_remote">Fetch Remote</string>
+</resources>
