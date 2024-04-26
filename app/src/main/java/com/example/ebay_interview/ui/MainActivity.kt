@@ -32,12 +32,10 @@ class MainActivity : AppCompatActivity() {
         // set observer
         viewModel.earths.observe(this, Observer { data ->
             list.clear()
-            list.addAll(data)
+            list.addAll(data.earthquakes)
             adapter.notifyDataSetChanged()
         })
 
-        // api call here
         viewModel.fetchData()
     }
-
 }
