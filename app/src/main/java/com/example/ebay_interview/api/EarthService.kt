@@ -16,7 +16,7 @@ interface EarthService {
         @Query("username") username: String
     ): Earthquakes
 
-    // this one works also
+    // test :  this one works also
     @GET("earthquakesJSON?formatted=true&north=55.1&south=-9.9&east=-22.4&west=55.2&username=mkoppelman")
     suspend fun getEarthList1(): Earthquakes
 
