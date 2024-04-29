@@ -15,14 +15,15 @@ class MainActivityViewModel : ViewModel() {
     fun fetchData() {
         viewModelScope.launch {
             //  Query : formatted=true&north=55.1&south=-9.9&east=-22.4&west=55.2&username=mkoppelman
-            val remoteData = RetrofitInstance.earthService.getEarthList(
-                true,
-                55.1,
-                -9.9,
-                -22.4,
-                55.2,
-                "mkoppelman"
-            )
+            val remoteData = RetrofitInstance.earthService.getEarthList1()
+//                RetrofitInstance.earthService.getEarthList(
+//                true,
+//                55.1,
+//                -9.9,
+//                -22.4,
+//                55.2,
+//                "mkoppelman"
+//            )
             _earths.value = remoteData
         }
     }
